@@ -71,17 +71,52 @@ public:
     { food = f; }
     void setStock(int s)
     { stocks = s; }
+
+class customer {
+int ID;
+string name;
+int phone;
+
+public:
+
+customer (int id, string n, int p)
+{
+ID=id;
+name=n;
+phone =p
+}
+
+void setID(int id)
+{ ID = id; }
+
+Int getID()
+{ return ID; }
+
+void setName(string n)
+{ name = n; }
+
+string getName()
+{ return name; }
+
+void setphone(int p)
+{ phone = p; }
+
+int getphone ()
+{ return phone; }
+
 };
 
 int main() {
     
     Food breakfastItem(1, "Pancakes", 300, 5.99);
     Stock breakfastStock(1, "breakfastItem", 50);
+    Customer breakfastCustomer(1,"mohammed",0552929077);
 
     cout << "Item: " << breakfastStock.getFood()<<breakfastItem.getName() << endl;
     cout << "Calories: " << breakfastStock.getFood()<<breakfastItem.getCalories() << endl;
     cout << "Price: $" << breakfastStock.getFood()<<breakfastItem.getPrice() << endl;
     cout << "Stock: " << breakfastStock.getStock() << endl;
+    cout<<"Customer:" <<breakfastCustomer.getCustomer() << endl;
 
     return 0;
 }
