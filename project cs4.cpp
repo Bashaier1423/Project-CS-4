@@ -9,7 +9,7 @@ class Food {
     int ID;
     string name;
     int calories;
-    double price;
+    double price; 
 
 public:
 
