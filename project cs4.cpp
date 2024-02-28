@@ -74,15 +74,32 @@ public:
 };
 
 int main() {
-    
-    Food breakfastItem(1, "Pancakes", 300, 5.99);
-    Stock breakfastStock(1, "breakfastItem", 50);
+    // Example usage
+    Food apple;
+    apple.setID(1);
+    apple.setName("Apple");
+    apple.setCalories(95);
+    apple.setPrice(1.0);
 
-    cout << "Item: " << breakfastStock.getFood()<<breakfastItem.getName() << endl;
-    cout << "Calories: " << breakfastStock.getFood()<<breakfastItem.getCalories() << endl;
-    cout << "Price: $" << breakfastStock.getFood()<<breakfastItem.getPrice() << endl;
-    cout << "Stock: " << breakfastStock.getStock() << endl;
+    Stock appleStock;
+    appleStock.setID(1);
+    appleStock.setFood(&apple);
+    appleStock.setStock(100);
+
+    Customer john;
+    john.setID(1);
+    john.setName("John Doe");
+    john.setPhone("123-456-7890");
+
+    Menu lunchMenu;
+    lunchMenu.setID(1);
+    lunchMenu.setName("Lunch");
+
+    Branch mainBranch;
+    mainBranch.setID(1);
+    mainBranch.setAddress("123 Main St");
 
     return 0;
 }
+
 
